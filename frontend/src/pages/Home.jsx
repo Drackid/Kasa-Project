@@ -1,15 +1,27 @@
-import '../styles/Home.css'
+import styles from './Home.module.css'
 
 function Home() {
     return (
-        <div className="home-page">
-            <h1>Bienvenue sur notre site !</h1>
-            <p>C'est ma première page React 😊</p>
+        <div className={styles.homePage}>
+            <h1>Bienvenue chez Kasa</h1>
+            <p>Trouvez le logement de vos rêves parmi notre sélection d'appartements de qualité.</p>
             
-            {/* Un peu d'interaction simple */}
-            <button onClick={() => alert('Merci de votre visite !')}>
-                Cliquez-moi !
-            </button>
+            <div className={styles.featuredSection}>
+                <h2>Nos derniers logements</h2>
+                <div className={styles.placeholderApartments}>
+                    {/* On simulera les appartements avec des placeholders pour l'instant */}
+                    <div className={styles.apartmentCard}>
+                        <div className={styles.apartmentImage}></div>
+                        <h3>Bel appartement Paris 11e</h3>
+                        <p>À partir de 150€/nuit</p>
+                    </div>
+                    <div className={styles.apartmentCard}>
+                        <div className={styles.apartmentImage}></div>
+                        <h3>Studio cosy Montmartre</h3>
+                        <p>À partir de 95€/nuit</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

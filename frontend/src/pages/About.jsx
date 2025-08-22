@@ -1,18 +1,28 @@
-import '../styles/About.css'
+import styles from './About.module.css'
 
 function About() {
     return (
-        <div className="about-page">
-            <h1>À propos de nous</h1>
-            <p>Je suis en train d'apprendre React !</p>
+        <div className={styles.aboutPage}>
+            <h1>À propos de Kasa</h1>
+            <p>Kasa est une entreprise de location d'appartements entre particuliers depuis plus de 10 ans.</p>
             
-            {/* Une petite liste pour pratiquer */}
-            <h2>Ce que j'ai appris :</h2>
-            <ul>
-                <li>Les composants React</li>
-                <li>React Router</li>
-                <li>Le CSS en React</li>
-            </ul>
+            <div className={styles.aboutSection}>
+                <h2>Nos valeurs</h2>
+                <ul>
+                    <li>
+                        <h3>Fiabilité</h3>
+                        <p>Les annonces postées sur Kasa garantissent une fiabilité totale.</p>
+                    </li>
+                    <li>
+                        <h3>Respect</h3>
+                        <p>La bienveillance fait partie des valeurs fondatrices de Kasa.</p>
+                    </li>
+                    <li>
+                        <h3>Service</h3>
+                        <p>Nos équipes se tiennent à votre disposition pour vous offrir une expérience parfaite.</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }

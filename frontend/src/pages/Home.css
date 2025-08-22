@@ -1,18 +1,18 @@
 /* Styles pour la page d'accueil */
-.homePage {
+.home-page {
     text-align: center;
 }
 
-.homePage h1 {
+.home-page h1 {
     color: #FF6060;
     margin-bottom: 20px;
 }
 
-.featuredSection {
+.featured-section {
     margin-top: 40px;
 }
 
-.placeholderApartments {
+.placeholder-apartments {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -20,7 +20,7 @@
     margin-top: 20px;
 }
 
-.apartmentCard {
+.apartment-card {
     width: 340px;
     padding: 10px;
     border-radius: 10px;
@@ -28,18 +28,18 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.apartmentImage {
+.apartment-image {
     height: 200px;
     background-color: #FF6060;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-.apartmentCard h3 {
+.apartment-card h3 {
     color: #FF6060;
     margin: 10px 0;
 }
 
-.apartmentCard p {
+.apartment-card p {
     color: #666;
 }

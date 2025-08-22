@@ -1,31 +1,31 @@
 /* Styles pour la page À propos */
-.aboutPage {
+.about-page {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.aboutPage h1 {
+.about-page h1 {
     color: #FF6060;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.aboutSection {
+.about-section {
     margin-top: 40px;
 }
 
-.aboutSection h2 {
+.about-section h2 {
     color: #FF6060;
     margin-bottom: 20px;
 }
 
-.aboutSection ul {
+.about-section ul {
     list-style: none;
     padding: 0;
 }
 
-.aboutSection li {
+.about-section li {
     background-color: #f8f9fa;
     padding: 20px;
     margin-bottom: 20px;
@@ -33,12 +33,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.aboutSection h3 {
+.about-section h3 {
     color: #FF6060;
     margin-bottom: 10px;
 }
 
-.aboutSection p {
+.about-section p {
     color: #666;
     line-height: 1.5;
 }

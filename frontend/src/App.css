@@ -1,11 +1,14 @@
-/* Styles pour la navigation */
+/* Styles de base pour l'application */
 .main-content {
-  padding: 20px;
-  min-height: 80vh;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-top: 40px;
+    border-top: 1px solid #e9ecef;
 }
