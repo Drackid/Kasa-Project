@@ -1,22 +1,24 @@
-import styles from './Home.module.css'
+import '../styles/Home.css'  // J'importe mon fichier CSS
 
 function Home() {
     return (
-        <div className={styles.homePage}>
+        <div className="home-page">
             <h1>Bienvenue chez Kasa</h1>
             <p>Trouvez le logement de vos rêves parmi notre sélection d'appartements de qualité.</p>
             
-            <div className={styles.featuredSection}>
+            {/* Ma première section avec des appartements */}
+            <div className="featured-section">
                 <h2>Nos derniers logements</h2>
-                <div className={styles.placeholderApartments}>
-                    {/* On simulera les appartements avec des placeholders pour l'instant */}
-                    <div className={styles.apartmentCard}>
-                        <div className={styles.apartmentImage}></div>
+                <div className="apartments-list">
+                    {/* Je crée une carte d'appartement */}
+                    <div className="apartment-card">
+                        <div className="apartment-image"></div>
                         <h3>Bel appartement Paris 11e</h3>
                         <p>À partir de 150€/nuit</p>
                     </div>
-                    <div className={styles.apartmentCard}>
-                        <div className={styles.apartmentImage}></div>
+                    {/* Je copie-colle pour un deuxième appartement */}
+                    <div className="apartment-card">
+                        <div className="apartment-image"></div>
                         <h3>Studio cosy Montmartre</h3>
                         <p>À partir de 95€/nuit</p>
                     </div>

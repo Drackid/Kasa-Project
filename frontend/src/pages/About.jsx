@@ -1,23 +1,27 @@
-import styles from './About.module.css'
+import '../styles/About.css'  // Mon CSS pour la page À propos
 
 function About() {
     return (
-        <div className={styles.aboutPage}>
+        <div className="about-page">
             <h1>À propos de Kasa</h1>
             <p>Kasa est une entreprise de location d'appartements entre particuliers depuis plus de 10 ans.</p>
             
-            <div className={styles.aboutSection}>
+            {/* La section avec nos valeurs */}
+            <div className="about-section">
                 <h2>Nos valeurs</h2>
                 <ul>
-                    <li>
+                    {/* Première valeur */}
+                    <li className="value-item">
                         <h3>Fiabilité</h3>
                         <p>Les annonces postées sur Kasa garantissent une fiabilité totale.</p>
                     </li>
-                    <li>
+                    {/* Deuxième valeur */}
+                    <li className="value-item">
                         <h3>Respect</h3>
                         <p>La bienveillance fait partie des valeurs fondatrices de Kasa.</p>
                     </li>
-                    <li>
+                    {/* Troisième valeur */}
+                    <li className="value-item">
                         <h3>Service</h3>
                         <p>Nos équipes se tiennent à votre disposition pour vous offrir une expérience parfaite.</p>
                     </li>
