@@ -1,14 +1,17 @@
-import React from 'react'
-import styles from './Home.module.css'
-import { useEffect } from 'react'
+import '../styles/Home.css'
 
 function Home() {
-  return (
-    <div className={styles.homeContainer}>
-      <h1 className={styles.title}>Page d'accueil</h1>
-      <p className={styles.welcomeText}>Bienvenue sur notre site !</p>
-    </div>
-  )
+    return (
+        <div className="home-page">
+            <h1>Bienvenue sur notre site !</h1>
+            <p>C'est ma première page React 😊</p>
+            
+            {/* Un peu d'interaction simple */}
+            <button onClick={() => alert('Merci de votre visite !')}>
+                Cliquez-moi !
+            </button>
+        </div>
+    )
 }
 
 export default Home
