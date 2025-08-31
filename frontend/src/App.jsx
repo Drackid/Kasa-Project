@@ -2,12 +2,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import About from './pages/About'
+import Footer from './components/Footer'
+import ApartmentDropdownDemo from './pages/ApartmentDropdownDemo'
 import './App.css'
+import ComponentsTest from './pages/ComponentsTest'
+import AccommodationDetail from './pages/AccommodationDetail'
 
 function App() {
     return (
         <BrowserRouter>
-            {/* Notre menu de navigation */}
+            {/* Notre header de navigation */}
             <Navigation />
             
             {/* Le contenu principal */}
@@ -15,14 +19,15 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/apartment-dropdown" element={<ApartmentDropdownDemo />} />
+                    <Route path="/components-test" element={<ComponentsTest />} />
+                    <Route path="/accommodation/:id" element={<AccommodationDetail />} />
                     {/* On peut ajouter d'autres routes plus tard ! */}
                 </Routes>
             </main>
 
-            {/* Un petit footer */}
-            <footer className="footer">
-                <p>Mon premier site React - 2024</p>
-            </footer>
+            {/* Footer selon Figma */}
+            <Footer />
         </BrowserRouter>
     )
 }
