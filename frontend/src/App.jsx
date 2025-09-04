@@ -7,6 +7,7 @@ import ApartmentDropdownDemo from './pages/ApartmentDropdownDemo'
 import './App.css'
 import ComponentsTest from './pages/ComponentsTest'
 import AccommodationDetail from './pages/AccommodationDetail'
+import NotFound from './pages/NotFound'
 
 function App() {
     return (
@@ -22,7 +23,8 @@ function App() {
                     <Route path="/apartment-dropdown" element={<ApartmentDropdownDemo />} />
                     <Route path="/components-test" element={<ComponentsTest />} />
                     <Route path="/accommodation/:id" element={<AccommodationDetail />} />
-                    {/* On peut ajouter d'autres routes plus tard ! */}
+                    {/* Catch-all 404 */}
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>
 
