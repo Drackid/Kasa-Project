@@ -1,7 +1,7 @@
 /* AccommodationDetail selon Figma - D_Fiche-Logement */
 
 .accommodation-detail {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
