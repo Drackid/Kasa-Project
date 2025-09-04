@@ -37,7 +37,7 @@
     gap: 57px;
     position: absolute;
     height: 34px;
-    left: 75.08%;
+    left: 70%;
     right: 0%;
     top: calc(50% - 34px/2);
 }
@@ -89,10 +89,17 @@
     }
     
     .header-nav {
-        gap: 30px;
+        gap: 20px;
     }
     
     .nav-link {
-        font-size: 18px;
+        font-size: 16px;
+        white-space: nowrap;
     }
+}
+
+@media (max-width: 480px) {
+    .header-container { height: 56px; padding: 0 16px; }
+    .header-nav { gap: 16px; }
+    .nav-link { font-size: 14px; }
 }

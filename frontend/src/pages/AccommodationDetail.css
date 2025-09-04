@@ -356,3 +356,59 @@
     flex-wrap: nowrap;
   }
 }
+
+/* Mobile 375px */
+@media (max-width: 480px) {
+  .main-content { padding: 20px 0 0; gap: 20px; }
+
+  /* Carrousel 335 x 255 */
+  .carousel-section { height: 255px; }
+  .carousel-container {
+    width: 335px;
+    height: 255px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .carousel-image img, .image-overlay { border-radius: 10px; }
+  .carousel-arrow.prev { left: 6px; }
+  .carousel-arrow.next { right: 6px; }
+  .image-counter { font-size: 12px; padding: 4px 10px; }
+
+  /* Bloc info 335px centré */
+  .accommodation-info,
+  .dropdowns-section {
+    padding: 0;
+    width: 335px;
+    margin: 0 auto;
+  }
+  .info-container { gap: 12px; }
+  .title-host-row { flex-direction: column; gap: 12px; }
+
+  /* Titre + localisation */
+  .accommodation-title { font-size: 18px; margin: 0; }
+  .accommodation-location { font-size: 14px; }
+  .tags-section { gap: 8px; }
+
+  /* Note et Hôte */
+  .rating-host-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    min-width: auto;
+  }
+  .rating { gap: 4px; }
+  .star { width: 18px; height: 18px; }
+  .host { flex-direction: row; align-items: center; gap: 8px; }
+  .host-name { font-size: 14px; text-align: right; }
+  .host-avatar { width: 40px; height: 40px; }
+
+  /* Dropdowns en colonne compacte */
+  .dropdowns-container { flex-direction: column; gap: 12px; }
+
+  /* Inverser l'ordre hôte / notation */
+  .rating-host-section { flex-direction: row-reverse; }
+  .rating-host-section .rating { order: 2; }
+  .rating-host-section .host { order: 1; }
+}

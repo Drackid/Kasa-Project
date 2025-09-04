@@ -110,8 +110,12 @@
 
 @media (max-width: 480px) {
     .gallery-container {
+        width: 335px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
+        padding: 10px;
+        gap: 12px;
+        border-radius: 10px;
     }
     .pagination { gap: 8px; }
 }
