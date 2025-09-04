@@ -24,7 +24,8 @@ function AccommodationDetail() {
         const foundAccommodation = data.find(acc => acc.id === id);
         
         if (!foundAccommodation) {
-          throw new Error('Logement non trouvé');
+          navigate('/404', { replace: true });
+          return;
         }
         
         setAccommodation(foundAccommodation);

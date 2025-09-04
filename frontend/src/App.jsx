@@ -23,6 +23,7 @@ function App() {
                     <Route path="/apartment-dropdown" element={<ApartmentDropdownDemo />} />
                     <Route path="/components-test" element={<ComponentsTest />} />
                     <Route path="/accommodation/:id" element={<AccommodationDetail />} />
+                    <Route path="/404" element={<NotFound />} />
                     {/* Catch-all 404 */}
                     <Route path="*" element={<NotFound />} />
                 </Routes>

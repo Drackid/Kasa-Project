@@ -70,3 +70,15 @@
 @media (max-width: 768px) {
     .about-page { padding: 20px 0px 0px; gap: 24px; }
 }
+
+@media (max-width: 480px) {
+    .about-page { gap: 19px; min-height: calc(100vh - 150px); }
+    /* Bannière 335x111 avec coins 10px */
+    .about-banner { width: 335px; height: 111px; border-radius: 10px; }
+    .about-banner__image { width: 335px; height: 111px; }
+    .about-banner__overlay { width: 335px; height: 111px; border-radius: 10px; }
+
+    /* Section valeurs largeur 335px */
+    .values-section { width: 335px; }
+    .values-container { width: 335px; gap: 20px; }
+}
