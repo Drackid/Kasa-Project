@@ -7,8 +7,6 @@ function Home() {
   const [accommodations, setAccommodations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 6;
 
   useEffect(() => {
     const fetchAccommodations = async () => {
@@ -29,20 +27,6 @@ function Home() {
     fetchAccommodations();
   }, []);
 
-  // Réinitialiser la page courante quand les données changent
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [accommodations.length]);
-
-  const totalPages = Math.max(1, Math.ceil(accommodations.length / ITEMS_PER_PAGE));
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-  const displayedAccommodations = accommodations.slice(startIndex, endIndex);
-
-  const goToPreviousPage = () => setCurrentPage((p) => Math.max(1, p - 1));
-  const goToNextPage = () => setCurrentPage((p) => Math.min(totalPages, p + 1));
-  const goToPage = (page) => setCurrentPage(page);
-
   if (loading) {
     return <div className="loading">Chargement des logements...</div>;
   }
@@ -52,7 +36,7 @@ function Home() {
   }
 
   return (
-    <div className="home">
+    <div className="home-page">
       {/* Banner selon Figma */}
       <Banner 
         title="Chez vous, partout et ailleurs"
@@ -62,7 +46,7 @@ function Home() {
       {/* Gallery des ThumbCards selon Figma */}
       <section className="gallery-section">
         <div className="gallery-container">
-          {displayedAccommodations.map((accommodation) => (
+          {accommodations.map((accommodation) => (
             <ThumbCard
               key={accommodation.id}
               id={accommodation.id}
@@ -71,38 +55,7 @@ function Home() {
             />
           ))}
         </div>
-        {/* Pagination */}
-        {accommodations.length > ITEMS_PER_PAGE && (
-          <div className="pagination">
-            <button
-              className="page-btn prev"
-              onClick={goToPreviousPage}
-              disabled={currentPage === 1}
-            >
-              Précédent
-            </button>
-
-            <div className="page-numbers">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <button
-                  key={page}
-                  className={`page-number${page === currentPage ? ' active' : ''}`}
-                  onClick={() => goToPage(page)}
-                >
-                  {page}
-                </button>
-              ))}
-            </div>
-
-            <button
-              className="page-btn next"
-              onClick={goToNextPage}
-              disabled={currentPage === totalPages}
-            >
-              Suivant
-            </button>
-          </div>
-        )}
+        
       </section>
     </div>
   );

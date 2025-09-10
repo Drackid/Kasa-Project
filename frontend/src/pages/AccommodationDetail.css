@@ -372,7 +372,7 @@
   .carousel-image img, .image-overlay { border-radius: 10px; }
   .carousel-arrow.prev { left: 6px; }
   .carousel-arrow.next { right: 6px; }
-  .image-counter { font-size: 12px; padding: 4px 10px; }
+  .image-counter { display: none; }
 
   /* Bloc info 335px centré */
   .accommodation-info,
