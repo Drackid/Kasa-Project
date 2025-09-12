@@ -1,38 +1,30 @@
-/* Tag selon Figma - Dimensions exactes */
+/* Tag adaptatif - suit le flux et reste dans son conteneur */
 
 .tag {
-  position: absolute;
-  width: 115px; /* Exact Figma */
-  height: 25px; /* Exact Figma */
-  left: 0px; /* Exact Figma */
-  top: 19px; /* Exact Figma */
   position: relative;
+  display: inline-block;
+  min-width: 115px; /* taille mini */
+  height: 25px; /* hauteur fixe Figma */
 }
 
 /* Rectangle 3 selon Figma */
 .tag-background {
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  background: #FF6060; /* Exact Figma */
-  border-radius: 10px; /* Exact Figma */
+  inset: 0;
+  background: #FF6060;
+  border-radius: 10px;
 }
 
 /* tag-name selon Figma */
 .tag-text {
-  position: absolute;
-  left: 19.13%; /* Exact Figma */
-  right: 19.13%; /* Exact Figma */
-  top: 12%; /* Exact Figma */
-  bottom: 8%; /* Exact Figma */
+  position: relative;
+  z-index: 1;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 500; /* Exact Figma */
-  font-size: 14px; /* Exact Figma */
-  line-height: 142.6%; /* Exact Figma - 20px */
-  color: #FFFFFF; /* Exact Figma */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,4 +32,5 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0 12px;
 }

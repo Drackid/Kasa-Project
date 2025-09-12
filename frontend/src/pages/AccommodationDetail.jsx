@@ -129,31 +129,28 @@ function AccommodationDetail() {
         {/* Informations du logement */}
         <section className="accommodation-info">
           <div className="info-container">
-            {/* Titre et hôte sur la même ligne */}
-            <div className="title-host-row">
-              {/* Titre et localisation */}
-              <div className="title-section">
-                <h1 className="accommodation-title">{accommodation.title}</h1>
-                <p className="accommodation-location">{accommodation.location}</p>
-              </div>
+            {/* 1 : Titre et localisation */}
+            <div className="title-section">
+              <h1 className="accommodation-title">{accommodation.title}</h1>
+              <p className="accommodation-location">{accommodation.location}</p>
+            </div>
 
-              {/* Hôte et note */}
-              <div className="rating-host-section">
-                <div className="host">
-                  <span className="host-name">{accommodation.host?.name || 'Hôte'}</span>
-                  <div className="host-avatar">
-                    {accommodation.host?.picture && (
-                      <img src={accommodation.host.picture} alt={accommodation.host.name} />
-                    )}
-                  </div>
+            {/* 2 : Hôte et notation */}
+            <div className="rating-host-section">
+              <div className="host">
+                <span className="host-name">{accommodation.host?.name || 'Hôte'}</span>
+                <div className="host-avatar">
+                  {accommodation.host?.picture && (
+                    <img src={accommodation.host.picture} alt={accommodation.host.name} />
+                  )}
                 </div>
-                <div className="rating">
-                  {renderStars(accommodation.rating || 5)}
-                </div>
+              </div>
+              <div className="rating">
+                {renderStars(accommodation.rating || 5)}
               </div>
             </div>
 
-            {/* Tags */}
+            {/* 3 : Tags */}
             <div className="tags-section">
               {accommodation.tags && accommodation.tags.map((tag, index) => (
                 <Tag key={index} tagName={tag} />

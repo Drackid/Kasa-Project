@@ -8,7 +8,9 @@ function Navigation() {
             <div className="header-container">
                 {/* Logo selon Figma */}
                 <div className="header-logo">
-                    <Logo width={120} height={40} />
+                    <Link to="/">
+                        <Logo width={120} height={40} />
+                    </Link>
                 </div>
                 
                 {/* Navigation selon Figma */}
