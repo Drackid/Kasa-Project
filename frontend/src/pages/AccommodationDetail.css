@@ -78,9 +78,7 @@
   right: 20px;
 }
 
-.carousel-arrow svg {
-  opacity: 0.87;
-}
+.carousel-arrow svg { opacity: 0.87; width: 47px; height: 79px; }
 
 /* Compteur d'images selon Figma */
 .image-counter {
