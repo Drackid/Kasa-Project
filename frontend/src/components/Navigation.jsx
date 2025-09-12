@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import Logo from './Logo'
 import '../styles/Navigation.css'
 
@@ -15,8 +15,8 @@ function Navigation() {
                 
                 {/* Navigation selon Figma */}
                 <nav className="header-nav">
-                    <Link to="/" className="nav-link">Accueil</Link>
-                    <Link to="/about" className="nav-link">A Propos</Link>
+                    <NavLink to="/" end className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Accueil</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>A Propos</NavLink>
                 </nav>
             </div>
         </header>
