@@ -22,5 +22,15 @@ export default {
       lines: 70,
       statements: 70
     }
-  }
+  },
+  reporters: [
+    'default',
+    ['jest-html-reporter', {
+      pageTitle: 'Rapport des Tests KASA',
+      outputPath: './test-results.html',
+      includeFailureMsg: true,
+      includeSuiteFailure: true,
+      sort: 'status'
+    }]
+  ]
 };
